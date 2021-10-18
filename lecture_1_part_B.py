@@ -3,7 +3,7 @@ import csv
 
 
 def print_all_student_from_csv():
-    with open('lecture_1_students_2_grads.csv', newline='') as csvfile:
+    with open('lecture_1_students_2_grades.csv', newline='') as csvfile:
         read = csv.reader(csvfile)
 
         next(read)  # ignore fist line in the csv
@@ -12,7 +12,7 @@ def print_all_student_from_csv():
 
 
 def read_csv_to_dict():
-    with open('lecture_1_students_2_grads.csv', newline='') as csvfile:
+    with open('lecture_1_students_2_grades.csv', newline='') as csvfile:
         read = csv.reader(csvfile)
         students = {}
 
@@ -56,7 +56,7 @@ def students_with_common_grade(students, common_grade):
 
 
 def add_student_to_csv(name, grade):
-    with open('lecture_1_students_2_grads.csv', 'a+', newline='') as csvfile:
+    with open('lecture_1_students_2_grades.csv', 'a+', newline='') as csvfile:
         writer = csv.writer(csvfile)
 
         writer.writerow([name, grade])
