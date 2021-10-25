@@ -1,4 +1,4 @@
-from Lecture_2.Player import Player
+from Lecture_2_class_init.Player import Player
 
 
 def main():
