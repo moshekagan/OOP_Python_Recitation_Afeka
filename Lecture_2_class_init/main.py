@@ -12,6 +12,9 @@ def main():
         print(f"{player.name} is NOT tall!")
 
     print()
+    print(player)
+
+    print()
     player.add_2_points()
     player.print_score()
 

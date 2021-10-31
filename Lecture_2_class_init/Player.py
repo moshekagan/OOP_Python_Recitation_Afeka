@@ -23,6 +23,12 @@ class Player:
         else:
             return False
 
+    def __str__(self):
+        return f"{self.player_id}, {self.name}, {self.height}, {self.position}, {self.birth_year}, {self.shirt_num}, {self.score}"
+
+    def __repr__(self):
+        return self.__str__()
+
     def add_points(self, points):
         if points > 0:
             self.score += points
