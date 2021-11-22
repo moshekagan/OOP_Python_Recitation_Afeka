@@ -1,6 +1,7 @@
 from Lecture_4_inheritance.BasketballPlayer import BasketballPlayer
 from Lecture_4_inheritance.Coach import Coach
 from Lecture_4_inheritance.FootballPlayer import FootballPlayer
+from Lecture_4_inheritance.Game import Game
 from Lecture_4_inheritance.Person import Person
 from Lecture_4_inheritance.Player import Player
 from Lecture_4_inheritance.Team import Team
@@ -34,6 +35,15 @@ def main():
     generic_player.print_me()
     basketball_player.print_me()
     football_player.print_me()
+    print()
+
+    macabbi = Team("Maccabi Tel-Aviv")
+    happoel = Team("Happoel Tel-Aviv")
+
+    game = Game(macabbi, happoel, (22, 11, 2021))
+    game.set_score(100, 101)
+
+    print(game)
 
 
 if __name__ == '__main__':
