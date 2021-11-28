@@ -10,5 +10,13 @@ class Game:
         self.score_a = score_a
         self.score_b = score_b
 
+    def get_winner(self):
+        if self.score_a > self.score_b:
+            return 1
+        elif self.score_a < self.score_b:
+            return 2
+        else:
+            return 0
+
     def __str__(self):
         return f"{self.team_a.name} - {self.score_a} : {self.score_b} - {self.team_b.name}"
