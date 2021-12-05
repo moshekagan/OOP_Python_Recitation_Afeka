@@ -14,7 +14,7 @@ class FootballGame(Game):
         self.half_2_score_a = 0
         self.half_2_score_b = 0
 
-    def set_quart(self, quart, score_a, score_b):
+    def set_half_score(self, quart, score_a, score_b):
         if quart == FIRST_HALF:
             self.half_1_score_a = score_a
             self.half_1_score_b = score_b
@@ -22,7 +22,7 @@ class FootballGame(Game):
             self.half_2_score_a = score_a
             self.half_2_score_b = score_b
 
-    def get_score_of_quart(self, quart):
+    def get_score_of_half(self, quart):
         if quart == FIRST_HALF:
             return self.half_1_score_a, self.half_1_score_b
         elif quart == SECOND_HALF:
