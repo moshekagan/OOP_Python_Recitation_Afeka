@@ -16,8 +16,9 @@ def main():
     except ValueError as e:
         year = 2021
         print(f"Wrong input! | {e}")
-    except Exception as e:
-        raise e
+    except InvalidYearError:
+        year = 1000
+        print("Year must be between 1000 - 2021! ")
 
 
 if __name__ == '__main__':
