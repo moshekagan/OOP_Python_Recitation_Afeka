@@ -4,7 +4,7 @@ from Lecture_5_exceptions.SportLeagueError import SportLeagueError
 
 class BasketballPlayer(Player):
     def __init__(self, name, person_id, birth_year, height, position, shirt_num):
-        if position not in ["PG", "SC", "SF", "PF", "C"]:
+        if position not in ["PG", "SG", "SF", "PF", "C"]:
             raise SportLeagueError(f"Invalid [{position}] position in BasketballPlayer!")
 
         super().__init__(name, person_id, birth_year, height, position, shirt_num)
