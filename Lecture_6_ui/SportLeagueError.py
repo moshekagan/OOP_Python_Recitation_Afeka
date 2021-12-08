@@ -1,0 +1,2 @@
+class SportLeagueError(ValueError):
+    pass
