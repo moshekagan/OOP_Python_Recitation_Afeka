@@ -1,4 +1,4 @@
-from Lecture_6_ui.Person import Person
+from Lecture_5_exceptions.Person import Person
 
 
 class Coach(Person):

@@ -1,4 +1,4 @@
-from Lecture_6_exceptions.BasketballGame import BasketballGame
+from Lecture_6_ui.BasketballGame import BasketballGame
 
 
 class TeamNotExistError(Exception):

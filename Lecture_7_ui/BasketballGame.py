@@ -1,5 +1,5 @@
-from Lecture_6_ui.Game import Game
-from Lecture_6_ui.SportLeagueError import SportLeagueError
+from Lecture_5_exceptions.Game import Game
+from Lecture_5_exceptions.SportLeagueError import SportLeagueError
 
 FIRST_QUARTER = 1
 SECOND_QUARTER = 2

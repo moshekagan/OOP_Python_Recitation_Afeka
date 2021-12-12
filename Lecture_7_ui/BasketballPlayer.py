@@ -3,11 +3,11 @@ from Lecture_6_ui.SportLeagueError import SportLeagueError
 
 
 class BasketballPlayer(Player):
-    def __init__(self, name, person_id, birth_year, height, position, shirt_num):
-        if position not in ["PG", "SG", "SF", "PF", "C"]:
+    def __init__(self, name, person_id, birth_year, height, position, shirt_num, profile_url):
+        if position not in ["PG", "SG", "SF", "PF", "C", "F", "G"]:
             raise SportLeagueError(f"Invalid [{position}] position in BasketballPlayer!")
 
-        super().__init__(name, person_id, birth_year, height, position, shirt_num)
+        super().__init__(name, person_id, birth_year, height, position, shirt_num, profile_url)
         self.rebounds = 0
 
     def print_me(self):

@@ -2,13 +2,16 @@ from Lecture_6_ui.Person import Person
 
 
 class Player(Person):
-    def __init__(self, name, person_id, birth_year, height, position, shirt_num):
+    def __init__(self, name, person_id, birth_year, height, position, shirt_num, profile_url):
         super().__init__(name, person_id, birth_year)
         self.height = height
         self.position = position
         self.shirt_num = shirt_num
         self.score = 0
         self.team = None
+        if not profile_url:
+            self.profile_url = "https://www.seekpng.com/png/full/514-5147412_default-avatar-icon.png"
+        self.profile_url = profile_url
 
     def print_me(self):
         super().print_me()
@@ -28,7 +31,7 @@ class Player(Person):
 
     def __str__(self):
         back = super().__str__()
-        return back + f", {self.height}, {self.position}, {self.shirt_num}, {self.score}"
+        return back + f", {self.height}, {self.position}, {self.shirt_num}, {self.score}, {self.profile_url}"
 
     def add_points(self, points):
         if points > 0:
