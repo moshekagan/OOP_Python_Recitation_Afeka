@@ -1,8 +1,5 @@
+from Lecture_6_ui import TeamNotExistError
 from Lecture_6_ui.BasketballGame import BasketballGame
-
-
-class TeamNotExistError(Exception):
-    pass
 
 
 class League:

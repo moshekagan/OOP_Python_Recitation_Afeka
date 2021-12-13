@@ -1,0 +1,3 @@
+
+class TeamNotExistError(Exception):
+    pass
