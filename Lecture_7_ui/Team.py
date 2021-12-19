@@ -13,6 +13,13 @@ class Team:
 
         return None
 
+    def get_player_by_name(self, player_name):
+        for player in self.players:
+            if player.name == player_name:
+                return player
+
+        return None
+
     def add_player(self, player):
         if player is None:
             return False

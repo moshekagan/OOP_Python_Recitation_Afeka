@@ -1,5 +1,5 @@
-from Lecture_6_ui.Player import Player
-from Lecture_6_ui.SportLeagueError import SportLeagueError
+from Lecture_7_ui.Player import Player
+from Lecture_7_ui.SportLeagueError import SportLeagueError
 
 
 class BasketballPlayer(Player):

@@ -19,4 +19,4 @@ class Game:
             return 0
 
     def __str__(self):
-        return f"{self.team_a.name} - {self.score_a} : {self.score_b} - {self.team_b.name}"
+        return f"{self.team_a.name} - {self.score_a} : {self.score_b} - {self.team_b.name} ({self.game_date[0]},{self.game_date[1]},{self.game_date[2]})"

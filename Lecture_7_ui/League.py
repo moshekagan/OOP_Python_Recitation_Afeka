@@ -1,8 +1,8 @@
 import csv
 
-from Lecture_6_ui.BasketballGame import BasketballGame
-from Lecture_6_ui.BasketballPlayer import BasketballPlayer
-from Lecture_6_ui.Team import Team
+from Lecture_7_ui.BasketballGame import BasketballGame
+from Lecture_7_ui.BasketballPlayer import BasketballPlayer
+from Lecture_7_ui.Team import Team
 
 
 class TeamNotExistError(Exception):
@@ -30,7 +30,7 @@ class League:
                                           birth_year=row[10],
                                           height=int(float(row[16])),
                                           position=row[7],
-                                          shirt_num=row[8],
+                                          shirt_num=int(row[8]),
                                           profile_url=row[11])
 
                 team = self.get_team_by_name(player_team_name)
@@ -66,11 +66,17 @@ class League:
 
         return False
 
-    def generate_game(self, team_a, team_b, date):
-        if not self._is_team_exist(team_a) or not self._is_team_exist(team_b):
+    def generate_game(self, team_name_a, team_name_b, date):
+        team_a = self.get_team_by_name(team_name_a)
+        team_b = self.get_team_by_name(team_name_b)
+        if team_a is None or team_b is None:
             raise TeamNotExistError
 
         game = BasketballGame(team_a, team_b, date)
         self.games.append(game)
 
         return game
+
+    def teams_names(self):
+        return [team.name for team in self.teams]
+

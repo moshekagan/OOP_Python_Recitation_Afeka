@@ -1,4 +1,4 @@
-from Lecture_6_ui.Person import Person
+from Lecture_7_ui.Person import Person
 
 
 class Player(Person):

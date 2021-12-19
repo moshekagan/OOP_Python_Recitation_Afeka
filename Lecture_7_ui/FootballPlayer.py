@@ -1,4 +1,4 @@
-from Lecture_5_exceptions.Player import Player
+from Lecture_7_ui.Player import Player
 
 
 class FootballPlayer(Player):
