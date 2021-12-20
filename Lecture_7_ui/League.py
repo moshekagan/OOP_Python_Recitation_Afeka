@@ -60,6 +60,9 @@ class League:
         return self.get_team_by_name(team.name) is not None
 
     def add_team(self, team):
+        if not isinstance(team, Team):
+            return False
+
         if not self._is_team_exist(team):
             self.teams.append(team)
             return True
